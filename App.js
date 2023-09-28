@@ -45,9 +45,9 @@ const RestaurantCard = () => {
                 alt="res-logo"
                 src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/gku70ucmf5wuguk5c09e" />
             <h3>Arsalan</h3>
+            <h4>Biryani, Mughlai, North Indian</h4>
             <h4>4.4 star</h4>
             <h4>24 MINS</h4>
-            <h4>Biryani, Mughlai, North Indian</h4>
         </div>
     )
 }
