@@ -23,3 +23,23 @@ https://github.com/namastedev/namaste-react
 - HTTPs
 - Tree Shaking - remove unused code
 - Different dev and prod bundles
+
+# Food order app structure
+
+/\*\*
+
+- Header
+- - Logo
+- - Nav Items
+- Body
+- - Search
+- - ResturantContainer
+-      - RestaurantCard
+-          - Image
+-          - Name of resturant, Rating, cuisine, delivery time
+- Footer
+- - Copyright
+- - Links
+- - Address
+- - Contact
+    \*/
