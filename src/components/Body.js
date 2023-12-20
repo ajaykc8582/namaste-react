@@ -60,7 +60,7 @@ const Body = () => {
                     <button className="px-4 py-2 bg-gray-100 rounded-lg"
                         onClick={() => {
                             const filteredList = listOfRestaurants.filter((res) =>
-                                res.info.avgRating > 4.4
+                                res.info.avgRating > 4.5
                             )
                             setListOfRestaurants(filteredList);
                         }}
