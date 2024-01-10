@@ -41,6 +41,14 @@ const appRouter = createBrowserRouter([
                 path: "/contact",
                 element: <Contact />
             },
+            // {
+            //     path: "/forgot-password",
+            //     element: <About />
+            // },
+            // {
+            //     path: "/reset-password/:id",
+            //     element: <About />
+            // },
             {
                 path: "/grocery",
                 element: <Suspense fallback={<h1>Loading...</h1>}> <Grocery /> </Suspense>
