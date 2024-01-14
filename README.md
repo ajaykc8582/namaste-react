@@ -44,6 +44,16 @@ https://github.com/namastedev/namaste-react
 - - Contact
     \*/
 
+# Redux toolkit
+ - Install @reduxjs/toolkit and react-redux
+ - Build our store
+ - Connect our store to our app
+ - Create slice(cartSlice)
+ - dispatch(action)
+ - Selector
+
+
+
 -Normal CSS
 .header {
 display: flex;
