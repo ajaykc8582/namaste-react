@@ -53,7 +53,7 @@ const Body = () => {
         <div className="search m-4 p-4">
           <input
             type="text"
-            className="border border-solid border-black"
+            className="border rounded-lg px-2 py-2 border-solid border-black"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -94,7 +94,7 @@ const Body = () => {
                    />
                 </div> */}
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap gap-5 justify-center ms-auto">
         {filteredRestaurant.map((restaurant) => (
           <Link 
             to={"/restaurants/" + restaurant.info.id}
@@ -113,3 +113,9 @@ const Body = () => {
 };
 
 export default Body;
+
+
+
+
+
+
