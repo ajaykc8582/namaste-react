@@ -3,6 +3,7 @@ import RestaurantCard, { hocResCard } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+// import ChatButton from "./ChatButton";
 // import UserContext from "../utils/UserContext";
 
 const Body = () => {
@@ -48,7 +49,7 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
+    <div className="body justify-center">
       <div className="filter flex">
         <div className="search m-4 p-4">
           <input
@@ -80,7 +81,7 @@ const Body = () => {
                 (res) => res.info.avgRating > 4.5
               );
 
-              setFilteredRestaurant(filteredList); 
+              setFilteredRestaurant(filteredList);
             }}
           >
             Top Rated Restaurants
@@ -93,10 +94,13 @@ const Body = () => {
                    onChange={(e)=> setUserName(e.target.value)}
                    />
                 </div> */}
+        {/* <div className="flex justify-end">
+          <ChatButton />
+        </div> */}
       </div>
-      <div className="flex flex-wrap gap-5 justify-center ms-auto">
+      <div className="flex flex-wrap gap-4 justify-center ms-auto">
         {filteredRestaurant.map((restaurant) => (
-          <Link 
+          <Link
             to={"/restaurants/" + restaurant.info.id}
             key={restaurant.info.id}
           >
@@ -113,9 +117,3 @@ const Body = () => {
 };
 
 export default Body;
-
-
-
-
-
-

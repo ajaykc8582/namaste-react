@@ -11,6 +11,8 @@ import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
+import Payment from "./components/Payment";
+import ChatButton from "./components/ChatButton";
 // import Grocery from "./components/Grocery";
 
 
@@ -80,6 +82,14 @@ const appRouter = createBrowserRouter([
             {
                 path: "/cart",
                 element: <Cart />
+            },
+            {
+                path: "/payment",
+                element: <Payment />
+            },
+            {
+                path: "/chat",
+                element: <ChatButton />
             }
         ],
         errorElement: <Error />,
