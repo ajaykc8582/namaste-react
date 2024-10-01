@@ -29,10 +29,10 @@ const Body = () => {
     // console.log("json", json);
 
     setListOfRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -42,6 +42,7 @@ const Body = () => {
     return (
       <h1>Looks like you're offline!! Please check your internet connection</h1>
     );
+
 
   // const {loggedInUser, setUserName } = useContext(UserContext);
 
@@ -55,6 +56,7 @@ const Body = () => {
           <input
             type="text"
             className="border rounded-lg px-2 py-2 border-solid border-black"
+            data-testid="searchInput"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);

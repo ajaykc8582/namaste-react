@@ -3,9 +3,10 @@ import { CDN_URL } from "../utils/constant";
 
 const RestaurantCard = (props) => {
     const { resData } = props;
+    // console.log(resData);
     const { name, cuisines, avgRating, costForTwo, sla } = resData?.info;
     return (
-        <div className="m-4 p-4 w-[240px] h-[390px] rounded-xl bg-gray-100 hover:bg-gray-200">
+        <div data-testid="resCard" className="m-4 p-4 w-[240px] h-[390px] rounded-xl bg-gray-100 hover:bg-gray-200">
           
             <img
                 className="rounded-lg h-52 w-full mb-4"

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import appLogo from "../assets/Hungarian2.png";
+// import appLogo from "../assets/Hungarian2.png";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
@@ -17,13 +17,13 @@ const Header = () => {
 
     //Subscribing to the store using a Selector
     const cartItems = useSelector((store) => store.cart.items);
-    console.log("from header", cartItems);
+    // console.log("from header", cartItems);
 
 
     return (
         <div className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-100 lg:bg-green-100">
             <div className="logo-container">
-                <img className="w-28" src={appLogo} />
+                {/* <img className="w-28" src={appLogo} /> */}
             </div>
             <div className="flex items-center">
                 <ul className="flex p-4 m-4">

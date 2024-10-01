@@ -64,3 +64,7 @@ https://github.com/namastedev/namaste-react
 - Install @babel/preset-react -> to make JSX work in test cases
 - Include @babel/preset-react inside my babel config
 - Install @testing-library/jest-dom-> npm i -D @testing-library/jest-dom
+
+- Install @babel/preset-react - to make JSX work in test cases
+- Include @babel/preset-react inside my babel config
+- Install @testing-library/jest-dom-> npm i -D @testing-library/jest-dom
