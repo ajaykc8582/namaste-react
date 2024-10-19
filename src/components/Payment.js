@@ -17,10 +17,10 @@ const Payment = () => {
       name: "HUNGARIAN",
       description: "Test Transaction",
       handler: (response) => {
-        console.log(response);
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature);
+        // console.log(response);
+        // alert(response.razorpay_payment_id);
+        // alert(response.razorpay_order_id);
+        // alert(response.razorpay_signature);
 
         dispatch(clearCart());
         navigate("/");
@@ -40,7 +40,6 @@ const Payment = () => {
 
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
-  
   };
 
   return (

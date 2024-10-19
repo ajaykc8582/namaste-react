@@ -22,17 +22,22 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5775218&lng=88.4313413&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5775218&lng=88.4313413&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+      {
+        headers: {
+          "x-cors-api-key": "temp_a3d1feecaa18f617639973eb783cc6f7",
+        },
+      }
     );
 
     const json = await data.json();
     // console.log("json", json);
 
     setListOfRestaurants(
-      json?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurant(
-      json?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -42,7 +47,6 @@ const Body = () => {
     return (
       <h1>Looks like you're offline!! Please check your internet connection</h1>
     );
-
 
   // const {loggedInUser, setUserName } = useContext(UserContext);
 
@@ -100,7 +104,7 @@ const Body = () => {
           <ChatButton />
         </div> */}
       </div>
-      <div className="flex flex-wrap gap-4 justify-center ms-auto">
+      <div className="flex flex-wrap justify-center ms-auto">
         {filteredRestaurant.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}

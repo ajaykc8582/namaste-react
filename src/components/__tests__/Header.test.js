@@ -19,7 +19,6 @@ it("should render the header component with login button", () => {
   expect(button).toBeInTheDocument();
 });
 
-
 it("should render the header component with a Cart items 0", () => {
   render(
     <BrowserRouter>
@@ -29,12 +28,10 @@ it("should render the header component with a Cart items 0", () => {
     </BrowserRouter>
   );
 
-  const cartItems = screen.getByText("Cart - (0 items)")
-  
+  const cartItems = screen.getByText("Cart - (0 items)");
+
   expect(cartItems).toBeInTheDocument();
 });
-
-
 
 it("should render the header component with a Cart item ", () => {
   render(
@@ -46,10 +43,9 @@ it("should render the header component with a Cart item ", () => {
   );
 
   const cartItems = screen.getByText(/Cart/);
-  
+
   expect(cartItems).toBeInTheDocument();
 });
-
 
 it("should change Login Button to Logout on click ", () => {
   render(
@@ -60,11 +56,11 @@ it("should change Login Button to Logout on click ", () => {
     </BrowserRouter>
   );
 
-  const loginButton = screen.getByRole("button", {name: "Login"});
+  const loginButton = screen.getByRole("button", { name: "Login" });
 
   fireEvent.click(loginButton);
 
-  const logoutButton = screen.getByRole("button", {name: "Logout"});
-  
+  const logoutButton = screen.getByRole("button", { name: "Logout" });
+
   expect(logoutButton).toBeInTheDocument();
 });
